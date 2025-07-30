@@ -1,0 +1,220 @@
+/* Zoom Controls for Dependency Diagram */
+.diagram-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 6px 10px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.pan-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 6px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.pan-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.pan-center {
+  width: 28px;
+  height: 28px;
+}
+
+.zoom-btn, .pan-btn {
+  background: #374151;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.zoom-btn:hover, .pan-btn:hover {
+  background: #4B5563;
+  transform: scale(1.05);
+}
+
+.zoom-btn:active, .pan-btn:active {
+  transform: scale(0.95);
+}
+
+.zoom-in-btn {
+  background: #059669;
+}
+
+.zoom-in-btn:hover {
+  background: #047857;
+}
+
+.zoom-out-btn {
+  background: #DC2626;
+}
+
+.zoom-out-btn:hover {
+  background: #B91C1C;
+}
+
+.reset-btn {
+  background: #7C3AED;
+  font-size: 12px;
+}
+
+.reset-btn:hover {
+  background: #6D28D9;
+}
+
+/* Pan button colors */
+.pan-up-btn {
+  background: #3B82F6;
+}
+
+.pan-up-btn:hover {
+  background: #2563EB;
+}
+
+.pan-down-btn {
+  background: #3B82F6;
+}
+
+.pan-down-btn:hover {
+  background: #2563EB;
+}
+
+.pan-left-btn {
+  background: #3B82F6;
+}
+
+.pan-left-btn:hover {
+  background: #2563EB;
+}
+
+.pan-right-btn {
+  background: #3B82F6;
+}
+
+.pan-right-btn:hover {
+  background: #2563EB;
+}
+
+.zoom-level-display {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  min-width: 35px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.diagram-canvas-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #1F2937;
+  border: 1px solid #374151;
+}
+
+.dependency-svg-main {
+  transition: transform 0.2s ease-in-out;
+  cursor: grab;
+}
+
+.dependency-svg-main:active {
+  cursor: grabbing;
+}
+
+/* Responsive controls */
+@media (max-width: 768px) {
+  .diagram-controls {
+    top: 5px;
+    left: 5px;
+    gap: 6px;
+  }
+
+  .zoom-controls, .pan-controls {
+    padding: 4px 6px;
+  }
+
+  .zoom-btn, .pan-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .zoom-level-display {
+    font-size: 10px;
+    min-width: 30px;
+    padding: 2px 4px;
+  }
+
+  .pan-center {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-controls {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .zoom-controls {
+    flex-direction: column;
+    gap: 3px;
+    padding: 3px 4px;
+  }
+
+  .pan-controls {
+    padding: 3px 4px;
+  }
+
+  .zoom-btn, .pan-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .zoom-level-display {
+    font-size: 9px;
+    min-width: 25px;
+    padding: 1px 3px;
+  }
+
+  .pan-center {
+    width: 20px;
+    height: 20px;
+  }
+} 

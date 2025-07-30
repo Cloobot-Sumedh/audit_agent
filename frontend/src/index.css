@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Clean Dependencies Styling */
+.dependencies-grid-clean {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dependency-item-clean {
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dependency-item-clean:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.dependency-main-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dependency-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.dependency-name-clean {
+  flex: 1;
+  font-weight: 500;
+}
+
+.dependency-type-clean {
+  background: #1a1a1a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  font-size: 0.75rem !important;
+  color: #999 !important;
+}
+
+/* Clean Relationship Cards */
+.relationship-cards-clean {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.relationship-detail-card-clean {
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.relationship-detail-card-clean:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.relationship-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.relationship-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.relationship-path-clean {
+  flex: 1;
+}
+
+.path-text-clean {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.current-component-clean {
+  color: #888;
+  font-weight: normal;
+}
+
+.clickable-dependency-clean:hover {
+  color: #64b5f6 !important;
+}
+
+.relationship-type-clean {
+  background: #1a1a1a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  font-size: 0.7rem;
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* List Dependency Page Layout */
+.dependency-content-layout {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+}
+
+.dependency-left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dependency-right-panel {
+  width: 350px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.right-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+  background: #333;
+}
+
+.right-panel-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.close-panel-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-panel-btn:hover {
+  background: #444;
+  color: white;
+}
+
+.right-panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.panel-object-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.panel-object-header h4 {
+  margin: 0 0 8px 0;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.object-type-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.panel-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-section {
+  background: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.panel-section h5 {
+  margin: 0 0 12px 0;
+  color: #2196F3;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.panel-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.panel-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}
+
+.panel-info-row:last-child {
+  border-bottom: none;
+}
+
+.panel-info-label {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.panel-info-value {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.description-text {
+  color: #e0e0e0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.xml-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.copy-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #5a67d8;
+}
+
+.panel-xml-container {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.panel-xml-code {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.no-panel-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #888;
+}
+
+.no-selection-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.no-panel-selection h4 {
+  margin: 0 0 8px 0;
+  color: white;
+}
+
+.no-panel-selection p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.loading-text {
+  color: #888;
+  font-style: italic;
+  margin: 0;
+}
+
+.api-error-text {
+  color: #e53e3e;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Diagram Control Buttons */
+.zoom-btn, .pan-btn {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.zoom-btn:hover, .pan-btn:hover {
+  background: #444;
+  border-color: #666;
+}
+
+.zoom-btn:active, .pan-btn:active {
+  background: #1a1a1a;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Dependency Page Styles */
+.dependency-page {
+  padding: 20px;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+
+.dependency-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.back-btn {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #444;
+  border-color: #666;
+}
+
+.dependency-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
