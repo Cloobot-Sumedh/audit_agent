@@ -6,10 +6,10 @@ def check_users():
         print("Connecting to database...")
         # Connect to database using the same config as database.py
         DB_CONFIG = {
-            'dbname': 'cloobotx_testing',
-            'user': 'azureusercloobotx',
-            'password': 'NQpJSoB3OHlhT3YnAr55',
-            'host': 'cloobotx.postgres.database.azure.com',
+            'dbname': '',
+            'user': '',
+            'password': '',
+            'host': '',
             'port': 5432
         }
         
