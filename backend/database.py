@@ -13,10 +13,10 @@ import logging
 
 # Database configuration from test_db.py
 DB_CONFIG = {
-    'dbname': 'cloobotx_testing',
-    'user': 'azureusercloobotx',
-    'password': 'NQpJSoB3OHlhT3YnAr55',
-    'host': 'cloobotx.postgres.database.azure.com',
+    'dbname': '',
+    'user': '',
+    'password': '',
+    'host': '',
     'port': 5432
 }
 
